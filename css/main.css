@@ -1,0 +1,114 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header {
+	margin-top: 40px;
+	text-align: center;
+	
+}
+
+h1.title {
+	font-family: 'Merriweather', serif;
+	font-size: 3em;
+	line-height: 1.3em;
+	color: #383434;
+}
+
+h4.strapline {
+	font-family: 'Merriweather', serif;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	color: #383434;
+}
+
+main {
+	border-radius: 10px;
+	margin: 70px 50px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.list-container {
+	min-height: 350px;
+	/*overflowY: scroll;*/
+	padding: 5px;
+}
+
+#new-item {
+	color: rgba(64, 221, 182, 1);
+	height: 50px;
+	padding: 10px;
+	font-size: 1.4em;
+	border: none;
+	min-width: 50px;
+}
+
+#new-item:focus {
+	outline: none;
+}
+
+button.btn {
+	background-color: rgba(64, 221, 182, 1);
+	background-image: url('../images/plus-sign.png') ;
+	background-position: center;
+	float: right;
+	color: #fff;
+	font-size: 1.7em;
+	font-weight: bold;
+	height: 50px;
+	width: 50px;
+}
+
+button.btn:active{
+	outline: none;
+}
+
+.list-container li {
+	background-color: rgba(64, 221, 182, 0.15);
+	height: 50px;
+	padding: 10px;
+	border-top: solid 6px #fff;
+	border-radius: 3px;
+	font-size: 1.3em;
+	color: #383434;
+	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+li span {
+	background-image: url('../images/remove-icon.png') no-repeat;
+	background-position: center;
+}
+
+li img {
+	float: right;
+
+}
+.remove {
+	display: none;
+}
+
+/*MEDIA QUERIES*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

@@ -1,0 +1,29 @@
+{
+  "name": "lucyzidour",
+  "version": "1.0.0",
+  "description": "Single page to-do list app",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucyMac/to-do-app.git"
+  },
+  "keywords": [
+    "to",
+    "do",
+    "list",
+    "app"
+  ],
+  "author": "Lucy Zidour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucyMac/to-do-app/issues"
+  },
+  "homepage": "https://github.com/LucyMac/to-do-app#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "vue": "^1.0.26"
+  }
+}
