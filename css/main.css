@@ -26,13 +26,13 @@ h4.strapline {
 
 main {
 	border-radius: 10px;
-	margin: 70px 50px;
+	margin: 70px 50px 0px 50px;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .list-container {
 	min-height: 350px;
-	/*overflowY: scroll;*/
+	overflowY: scroll;
 	padding: 5px;
 }
 
@@ -62,7 +62,7 @@ button.btn {
 	width: 50px;
 }
 
-button.btn:active{
+button.btn:active {
 	outline: none;
 }
 
@@ -78,14 +78,10 @@ button.btn:active{
 	position: relative;
 }
 
-.completed {
+li.completed {
 	text-decoration: line-through;
+	color: #a8a8a8;
 }
-
-/*li span {
-	background-image: url('../images/remove-icon.png') no-repeat;
-	background-position: center;
-}*/
 
 div.cross {
 	background: url('../images/remove-icon.png') center right no-repeat;
@@ -96,23 +92,12 @@ div.cross {
 	top: 5px;
 }
 
-/*div.cross:hover {
-	background: url('../images/remove-icon.png') center right no-repeat;
+p.instructions {
+	padding: 50px 10px 20px 4px;
+	color: #a8a8a8;
+	font-style: italic;
 }
 
-.remove {
-	background-image: url('../images/remove-icon.png');
-	background-position: center;*/
-}
-
-/*img.cross {
-	display: none;
-}
-div.cross:hover {
-	background: url('../images/remove-icon.png');
-
-}
-*/
 /*MEDIA QUERIES*/
 
 /* Extra small devices (phones, less than 768px) */

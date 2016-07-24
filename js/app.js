@@ -1,11 +1,11 @@
 Vue.component ('todo', {  //exiting list of todos
 
-	props: ['list'],
+	props: ['list'], //props pass data to components
 
 	template: '#todo-template',
 
 	methods: {
-		deleteTodo: function(todo) {
+		deleteTodo: function(todo) { //method called on click of item cross icon
 			this.list.$remove(todo);
 		}
 	}
@@ -14,15 +14,14 @@ Vue.component ('todo', {  //exiting list of todos
 var vm = new Vue ({
 	el: '#app',
 	data: {
-		todos: [
+		todos: [ 
 		]
 	},
 	methods: {
-		addNewTodo: function(newTodo) {
-			var newTask = $('#new-item').val(); //store user input
-			$('#new-item').val(""); //empty input field after adding new item
-			this.todos.push({ content: newTask, completed: false }); //add new itemto bottom of list
-
+		addNewTodo: function() {
+			var newInput = this.newTodo; //store user input
+			this.todos.push({ content: newInput, completed: false }); //add new itemto bottom of list
+			this.newTodo = ""; //empty input field after adding new item
 		}
  	}
 });
