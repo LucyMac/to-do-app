@@ -42,7 +42,8 @@ main {
 	padding: 10px;
 	font-size: 1.4em;
 	border: none;
-	min-width: 50px;
+	width: 80%;
+	margin-bottom: 50px;
 }
 
 #new-item:focus {
@@ -51,7 +52,7 @@ main {
 
 button.btn {
 	background-color: rgba(64, 221, 182, 1);
-	background-image: url('../images/plus-sign.png') ;
+	background-image: url('../images/plus-sign.png');
 	background-position: center;
 	float: right;
 	color: #fff;
@@ -67,32 +68,51 @@ button.btn:active{
 
 .list-container li {
 	background-color: rgba(64, 221, 182, 0.15);
-	height: 50px;
+	min-height: 50px;
 	padding: 10px;
 	border-top: solid 6px #fff;
 	border-radius: 3px;
 	font-size: 1.3em;
 	color: #383434;
 	cursor: pointer;
+	position: relative;
 }
 
 .completed {
 	text-decoration: line-through;
 }
 
-li span {
+/*li span {
 	background-image: url('../images/remove-icon.png') no-repeat;
 	background-position: center;
+}*/
+
+div.cross {
+	background: url('../images/remove-icon.png') center right no-repeat;
+	width: 50px;
+	height: 40px;
+	position: absolute;
+	right: 8px;
+	top: 5px;
 }
 
-li img {
-	float: right;
-
+/*div.cross:hover {
+	background: url('../images/remove-icon.png') center right no-repeat;
 }
+
 .remove {
+	background-image: url('../images/remove-icon.png');
+	background-position: center;*/
+}
+
+/*img.cross {
 	display: none;
 }
+div.cross:hover {
+	background: url('../images/remove-icon.png');
 
+}
+*/
 /*MEDIA QUERIES*/
 
 /* Extra small devices (phones, less than 768px) */
