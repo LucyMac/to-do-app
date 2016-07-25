@@ -52,14 +52,14 @@ main#app {
 	height: 50px;
 	padding: 10px 10px 10px 0px;
 	margin-right: 6px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	border: none;
 	width: 80%;
 	margin-bottom: 50px;	
 }
 
 #new-item[placeholder] {
-	font-size: 1.1em;
+	font-size: 1.4em;
 }
 
 #new-item:focus {
