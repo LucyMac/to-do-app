@@ -32,6 +32,7 @@ main {
 
 .list-container {
 	min-height: 350px;
+	min-width: 220px;
 	overflowY: scroll;
 	padding: 5px;
 }
@@ -44,6 +45,9 @@ main {
 	border: none;
 	width: 80%;
 	margin-bottom: 50px;
+}
+[placeholder] {
+	font-size: 0.5em;
 }
 
 #new-item:focus {

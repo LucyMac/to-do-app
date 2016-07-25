@@ -1,20 +1,17 @@
 {
-  "name": "lucyzidour",
+  "name": "to-do-app",
   "version": "1.0.0",
   "description": "Single page to-do list app",
   "main": "js/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LucyMac/to-do-app.git"
   },
   "keywords": [
-    "to",
     "do",
     "list",
-    "app"
+    "app", 
+    "task"
   ],
   "author": "Lucy Zidour",
   "license": "ISC",
