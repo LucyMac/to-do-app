@@ -37,17 +37,20 @@ main {
 	padding: 5px;
 }
 
+#adding-item-container {
+	width: 100%;
+}
+
 #new-item {
+	border-radius: 3px;
 	color: rgba(64, 221, 182, 1);
 	height: 50px;
-	padding: 10px;
+	padding: 10px 10px 10px 0px;
+	margin-right: 6px;
 	font-size: 1.4em;
 	border: none;
 	width: 80%;
 	margin-bottom: 50px;
-}
-[placeholder] {
-	font-size: 0.5em;
 }
 
 #new-item:focus {
@@ -58,12 +61,12 @@ button.btn {
 	background-color: rgba(64, 221, 182, 1);
 	background-image: url('../images/plus-sign.png');
 	background-position: center;
-	float: right;
 	color: #fff;
 	font-size: 1.7em;
 	font-weight: bold;
 	height: 50px;
 	width: 50px;
+	float: right;
 }
 
 button.btn:active {
@@ -74,7 +77,8 @@ button.btn:active {
 	background-color: rgba(64, 221, 182, 0.15);
 	min-height: 50px;
 	padding: 10px;
-	border-top: solid 6px #fff;
+	border: none;
+	margin-bottom: 6px;
 	border-radius: 3px;
 	font-size: 1.3em;
 	color: #383434;
@@ -85,6 +89,16 @@ button.btn:active {
 li.completed {
 	text-decoration: line-through;
 	color: #a8a8a8;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
 }
 
 div.cross {

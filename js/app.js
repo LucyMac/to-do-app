@@ -1,7 +1,7 @@
 var vm = new Vue ({
 	el: '#app',
 	data: {
-		newTodo: '',  //initialise newTodo
+		newTodo: '',  //initialising newTodo
 
 		todos: localStorage.getItem('todos')   
       	? JSON.parse(localStorage.getItem('todos'))  
@@ -12,9 +12,9 @@ var vm = new Vue ({
 		save: function() {     //persist list locally
       		localStorage.setItem('todos', JSON.stringify(this.todos)); 
 		},
-		addNewTodo: function() {  //called both on click of + button and on keydown Enter
+		addNewTodo: function() {  //called both on click of 'add' button and on keydown Enter
 			var newInput = this.newTodo; //store user input
-			this.todos.push({ content: newInput, completed: false }); //add new item to bottom of list
+			this.todos.push({content: newInput, completed: false}); //add new item to bottom of list
 			this.newTodo = ""; //empty input field after adding new item
 			this.save();
 		},
@@ -26,6 +26,24 @@ var vm = new Vue ({
 			this.todos.$remove(todo);
 			this.save();
 		}
- 	}
+	}
+});
+
+
+//Making list sortable with drag and drop
+//script courtesy of RubaXa at https://github.com/RubaXa/Sortable
+var el = document.getElementById('todo-list');
+var sortable = Sortable.create(el, {
+    group: "localStorage-example",
+    store: {
+        get: function (sortable) {
+            var order = localStorage.getItem(sortable.options.group.name);
+            return order ? order.split('|') : [];
+        },
+        set: function (sortable) {
+            var order = sortable.toArray();
+            localStorage.setItem(sortable.options.group.name, order.join('|'));
+        }
+    }
 });
 
