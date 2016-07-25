@@ -4,41 +4,46 @@
 	box-sizing: border-box;
 }
 
+.container {
+	margin: 50px auto;
+	padding: 10px 400px;
+}
+
 header {
-	margin-top: 40px;
+	margin: 40px 0;
 	text-align: center;
 	
 }
 
 h1.title {
 	font-family: 'Merriweather', serif;
-	font-size: 3em;
-	line-height: 1.3em;
+	font-size: 2.5em;
+	line-height: 1.2em;
 	color: #383434;
 }
 
 h4.strapline {
 	font-family: 'Merriweather', serif;
-	font-size: 1.5em;
-	line-height: 1.5em;
+	font-size: 1.1em;
+	line-height: 1.2em;
 	color: #383434;
 }
 
-main {
+main#app {
 	border-radius: 10px;
-	margin: 70px 50px 0px 50px;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .list-container {
 	min-height: 350px;
-	min-width: 220px;
 	overflowY: scroll;
-	padding: 5px;
+	padding: 10px;
 }
 
 #adding-item-container {
 	width: 100%;
+	max-height: 102px;
+	position: relative;
 }
 
 #new-item {
@@ -47,10 +52,14 @@ main {
 	height: 50px;
 	padding: 10px 10px 10px 0px;
 	margin-right: 6px;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	border: none;
 	width: 80%;
-	margin-bottom: 50px;
+	margin-bottom: 50px;	
+}
+
+#new-item[placeholder] {
+	font-size: 1.1em;
 }
 
 #new-item:focus {
@@ -67,6 +76,9 @@ button.btn {
 	height: 50px;
 	width: 50px;
 	float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 button.btn:active {
@@ -80,7 +92,7 @@ button.btn:active {
 	border: none;
 	margin-bottom: 6px;
 	border-radius: 3px;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: #383434;
 	cursor: pointer;
 	position: relative;
@@ -105,7 +117,6 @@ div.cross {
 	background: url('../images/remove-icon.png') center right no-repeat;
 	width: 50px;
 	height: 40px;
-	position: absolute;
 	right: 8px;
 	top: 5px;
 }
@@ -123,15 +134,19 @@ p.instructions {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
+	#new-item {
+		font-size: 1.4em;
+	}
+	#new-item[placeholder] {
+		font-size: 1.4em;
+	}
+	h1.title {
+		font-size: 3em;
+		line-height: 1.3em;
+	}
 
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
-
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
-
+	h4.strapline {
+		font-size: 1.4em;
+		line-height: 1.5em;
+	}
 }

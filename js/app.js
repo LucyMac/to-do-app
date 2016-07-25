@@ -4,12 +4,12 @@ var vm = new Vue ({
 		newTodo: '',  //initialising newTodo
 
 		todos: localStorage.getItem('todos')   
-      	? JSON.parse(localStorage.getItem('todos'))  
+      	? JSON.parse(localStorage.getItem('todos'))  //get todo content to persist list locally
 		: [  //set todos list as empty array
 		]
 	},
 	methods: {
-		save: function() {     //persist list locally
+		save: function() {     //save todo content to persist list locally
       		localStorage.setItem('todos', JSON.stringify(this.todos)); 
 		},
 		addNewTodo: function() {  //called both on click of 'add' button and on keydown Enter
@@ -30,7 +30,7 @@ var vm = new Vue ({
 });
 
 
-//Making list sortable with drag and drop
+//Using sortable.js to drag and drop
 //script courtesy of RubaXa at https://github.com/RubaXa/Sortable
 var el = document.getElementById('todo-list');
 var sortable = Sortable.create(el, {

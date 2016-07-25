@@ -15,12 +15,13 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<header class="col-md-5">
+				<header class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 					<h1 class="title">Things to do</h1>
 					<h4 class="strapline">Keep track and stay on top</h4>
 				</header>
-				<main id="app" class="col-md-5">  
-			    <section class="list-container">
+			</div>
+			<div class="row">
+				<main id="app" class="list-container col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">  
 			    	<div id="adding-item-container">
 							<input 
 							id="new-item" 
@@ -51,9 +52,8 @@
 							class="instructions"
 							v-show="todos.length > 0"
 							>
-							Click an item to mark as done, click the cross to delete it. 
+							Click an item to mark as done, click the cross to delete it. Drag and drop to reorder.
 						</p>
-			    </section>   
 				</main>
 			</div>
 		</div>
