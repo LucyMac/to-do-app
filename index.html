@@ -23,39 +23,31 @@
 				<main id="app" class="col-md-5">  
 				    <section class="list-container">
 				    	<div class="adding-item-container">
-							<input 
-							v-model="newTodo" 
-							@keyup.enter="addNewTodo(todo)"
-							id="new-item" 
-							type="text" placeholder="Add a to-do here"
-   							>
-							<button @click="addNewTodo(todo)" type="button" class="btn btn-lg"></button>
+						<input 
+						v-model="newTodo" 
+						@keyup.enter="addNewTodo(todo)"
+						id="new-item" 
+						type="text" placeholder="Add a to-do here"
+		   				>
+						<button @click="addNewTodo(todo)" type="button" class="btn btn-lg"></button>
 				    	</div>
 				    	<ul>
-						   <li 
-						   	v-for="todo in todos"
-						    :class="{'completed': todo.completed}"
-						    @click="markComplete(todo)"
-						    draggable="true" 
-						    @dragover.prevent 
-						    @drop="drop"
-						   >
-				    			{{todo.content}}
-								
-								<div class="cross" @click="deleteTodo(todo)"></div>
-							</li>
+				    		<li 
+						v-for="todo in todos"
+						:class="{'completed': todo.completed}"
+						@click="markComplete(todo)"
+						draggable="true" 
+						@dragover.prevent 
+						@drop="drop"
+						>
+			    				{{todo.content}}
+							
+							<div class="cross" @click="deleteTodo(todo)"></div>
+						</li>
 						<p v-show="todos.length > 0" class="instructions">Click an item to mark as done, click the cross to delete it. </p>
-		  				</ul>
+		  			</ul>
 				    </section>   
-			</main>
-				<!--<template id="new-item-template">
-   				
-   				
-   		</template>	
-    				
-			<template id="todo-template">
-			
-			</template>-->
+				</main>
 			</div>
 		</div>
 		<script type="text/javascript" src="js/vue.js"></script>
